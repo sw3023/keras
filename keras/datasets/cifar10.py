@@ -54,7 +54,7 @@ def load_data_local(origin = 'https://www.cs.toronto.edu/~kriz/cifar-10-python.t
     x_train = np.zeros((num_train_samples, 3, 32, 32), dtype='uint8')
     y_train = np.zeros((num_train_samples,), dtype='uint8')
 
-    for i in range(1, num_train_samples/train_samples+1):
+    for i in range(1, int(num_train_samples/train_samples)+1):
         fpath = os.path.join(path, 'data_batch_' + str(i))
         data, labels = load_batch(fpath)
         x_train[(i - 1) * train_samples: i * train_samples, :, :, :] = data
