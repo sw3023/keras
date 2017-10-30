@@ -39,7 +39,7 @@ def load_data():
 
     return (x_train, y_train), (x_test, y_test)
 
-def load_data_local(origin = 'https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz'):
+def load_data_local(origin = 'https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz',num_train_samples = 50000):
     """Loads CIFAR10 dataset.
 
     # Returns
@@ -49,7 +49,7 @@ def load_data_local(origin = 'https://www.cs.toronto.edu/~kriz/cifar-10-python.t
     #origin = 'http://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz'
     path = get_file(dirname, origin=origin, untar=True)
 
-    num_train_samples = 50000
+    #num_train_samples = 50000
 
     x_train = np.zeros((num_train_samples, 3, 32, 32), dtype='uint8')
     y_train = np.zeros((num_train_samples,), dtype='uint8')
